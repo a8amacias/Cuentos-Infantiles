@@ -12,6 +12,8 @@ const ARCHIVOS = [
   'Imagenes/Pinocho2.jpg',
   'Imagenes/portada-192.jpg',
   'Imagenes/portada-512.jpg',
+   'Imagenes/niños1.jpg',
+   'Imagenes/niños2.jpg',
 ];
 
 self.addEventListener('install', (event) => {
