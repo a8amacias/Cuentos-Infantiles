@@ -18,8 +18,10 @@ const IMAGENES = [
   'cucarachin2.jpg',
   'ricitos.jpg',
   'ricitos2.jpg',
-  'avestruz.jpg',
+  'avestruz1.jpg',
   'avestruz2.jpg',
+  'gato1.jpg',
+  'gato2.jpg',
 ];
 
 self.addEventListener('install', (event) => {
