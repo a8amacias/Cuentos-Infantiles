@@ -22,6 +22,8 @@ const IMAGENES = [
   'avestruz2.jpg',
   'gato1.png',
   'gato2.jpg',
+  'montaña11.png',
+  'montaña2.png',
 ];
 
 self.addEventListener('install', (event) => {
