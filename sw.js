@@ -1,11 +1,5 @@
 const CACHE = 'cuentos-v1';
 const ARCHIVOS = [
-  'index.html',
-  'Caperucita.html',
-  'Cochinitos.html',
-  'Pinocho.html',
-  'niños.html',
-  'saltarin.html',
   'caperucita1.jpg',
   'caperucitan2.jpg',
   'cochinitos1.jpg',
@@ -21,10 +15,26 @@ const ARCHIVOS = [
 ];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(ARCHIVOS)));
+  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(IMAGENES)));
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => Promise.all(
+      keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))
+    ))
+  );
 });
 
 self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+
+  if (url.pathname.endsWith('.html') || url.pathname.endsWith('/')) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((resp) => resp || fetch(event.request))
   );
