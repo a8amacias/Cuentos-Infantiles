@@ -20,7 +20,7 @@ const IMAGENES = [
   'ricitos2.jpg',
   'avestruz1.jpg',
   'avestruz2.jpg',
-  'gato1.jpg',
+  'gato1.png',
   'gato2.jpg',
 ];
 
