@@ -12,6 +12,10 @@ const IMAGENES = [
    'niños2.jpg',
   'saltarin.jpg',
   'saltarin1.jpg',
+  'ratita1.jpg',
+  'ratita2.jpg',
+  'cucarachin1.jpg',
+  'cucarachin2.jpg',
 ];
 
 self.addEventListener('install', (event) => {
