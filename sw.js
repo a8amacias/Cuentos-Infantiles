@@ -18,8 +18,6 @@ const IMAGENES = [
   'cucarachin2.jpg',
   'ricitos.jpg',
   'ricitos2.jpg',
-  'avestruz1.jpg',
-  'avestruz2.jpg',
   'gato1.png',
   'gato2.jpg',
   'montaña11.png',
