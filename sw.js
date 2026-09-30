@@ -1,5 +1,5 @@
 const CACHE = 'cuentos-v1';
-const ARCHIVOS = [
+const IMAGENES = [
   'caperucita1.jpg',
   'caperucitan2.jpg',
   'cochinitos1.jpg',
