@@ -26,6 +26,10 @@ const IMAGENES = [
   'avestruz2.jpg',
   'gravedad1.jpg',
   'gravedad2.jpg',
+  'carreras1.jpg',
+  'carreras2.jpg',
+  'burbujita1.jpg',
+  'burbujita2.jpg',
 ];
 
 self.addEventListener('install', (event) => {
