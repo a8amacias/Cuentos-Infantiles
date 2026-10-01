@@ -1,7 +1,7 @@
 {
   "name": "Cuentos de Alan",
   "short_name": "Cuentos",
-  "start_url": " https://a8amacias.github.io/Cuentos-Infantiles/",
+  "start_url": "https://a8amacias.github.io/Cuentos-Infantiles/",
   "display": "standalone",
   "background_color": "#66cccc",
   "theme_color": "#33cccc",
