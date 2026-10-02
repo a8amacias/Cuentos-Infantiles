@@ -1,7 +1,6 @@
 const CACHE = 'cuentos-v2';
 const RECURSOS = [
   'index.html',
-  'Jack.html',
   'Caperucita.html',
   'Cochinitos.html',
   'Jack.html',
@@ -39,6 +38,8 @@ const RECURSOS = [
   'ricitos2.jpg',
   'gato1.png',
   'gato2.jpg',
+  'jack1.jpg',
+  'jack2.jpg',
   'montaña11.png',
   'montaña2.png',
   'avestruz1.jpg',
