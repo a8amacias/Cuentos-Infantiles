@@ -3,8 +3,8 @@
   "short_name": "Cuentos",
   "start_url": "https://a8amacias.github.io/Cuentos-Infantiles/",
   "display": "standalone",
-  "background_color": "#66cccc",
-  "theme_color": "#33cccc",
+  "background_color": "#216928",
+  "theme_color": "#339C25",
   "icons": [
     {
       "src": "portada-192.png",
