@@ -1,5 +1,23 @@
-const CACHE = 'cuentos-v1';
-const IMAGENES = [
+const CACHE = 'cuentos-v2';
+const RECURSOS = [
+  'index.html',
+  'Caperucita.html',
+  'Cochinitos.html',
+  'Jack.html',
+  'Pinocho.html',
+  'avestruz.html',
+  'burbujas.html',
+  'carrera.html',
+  'cucarachin.html',
+  'gato.html',
+  'gravedad.html',
+  'luna.html',
+  'montaña.html',
+  'niños.html',
+  'pastorcito.html',
+  'ratita.html',
+  'ricitos.html',
+  'saltarin.html',
   'caperucita1.jpg',
   'caperucitan2.jpg',
   'cochinitos1.jpg',
@@ -31,29 +49,20 @@ const IMAGENES = [
   'burbujita1.jpg',
   'burbujita2.jpg',
 ];
-
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(IMAGENES)));
+  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(RECURSOS)));
   self.skipWaiting();
 });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((keys) => Promise.all(
-      keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))
-    ))
-  );
-});
-
 self.addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url);
-
-  if (url.pathname.endsWith('.html') || url.pathname.endsWith('/')) {
-    event.respondWith(fetch(event.request));
-    return;
-  }
-
   event.respondWith(
-    caches.match(event.request).then((resp) => resp || fetch(event.request))
+    caches.match(event.request).then((resp) => resp || fetch(event.request).then((res) => {
+      const copy = res.clone();
+      caches.open(CACHE).then((cache) => cache.put(event.request, copy));
+      return res;
+    }))
   );
 });
+
+
+
