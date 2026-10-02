@@ -1,6 +1,7 @@
 const CACHE = 'cuentos-v2';
 const RECURSOS = [
   'index.html',
+  'Jack.html',
   'Caperucita.html',
   'Cochinitos.html',
   'Jack.html',
