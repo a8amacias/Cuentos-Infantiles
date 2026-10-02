@@ -3,7 +3,7 @@ const RECURSOS = [
   'index.html',
   'Caperucita.html',
   'Cochinitos.html',
-  'Jack.html',
+  'jack.html',
   'Pinocho.html',
   'avestruz.html',
   'burbujas.html',
